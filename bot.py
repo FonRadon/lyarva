@@ -20,6 +20,10 @@ dp = Dispatcher()
 async def start(message: types.Message):
     await message.answer("приветик, это я, кариночка 💋")
 
+@dp.message(Command("owneo"))
+async def start(message: types.Message):
+    await message.answer("Ильяс, киберспортсмен, один из лучших игроков в Мире танков.")
+
 # Только "лярва" - рандомный файл
 @dp.message(F.text.lower().contains("лярва"))
 async def send_random_media(message: types.Message):
